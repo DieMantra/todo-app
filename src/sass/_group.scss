@@ -1,0 +1,155 @@
+.group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	background-color: $clr-mid;
+	border-radius: $radius-top-left;
+	margin: 0 auto;
+	max-width: $max-width-md;
+	font-size: 1.6rem;
+	box-shadow: $shadow;
+	margin-bottom: $mg-md;
+	border: 1px solid $clr-dark-25;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: $pad-lg;
+		width: 100%;
+
+		& img {
+			margin-right: $mg-sm;
+			width: 2.2rem;
+			height: 2.2rem;
+		}
+	}
+
+	& ul {
+		background-color: $clr-dark;
+		width: 100%;
+		color: $clr-light;
+
+		& li {
+			padding: $pad-md;
+			border-bottom: 1px solid $clr-dark-25;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+.header__new-group {
+	position: relative;
+}
+
+.new-group {
+	--width: 15rem;
+	--height: 5rem;
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 99;
+	font-size: 1.4rem;
+
+	&__container {
+		transition: 500ms all ease-in-out;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $clr-dark-50;
+		height: 100vh;
+		width: 100%;
+		backdrop-filter: $filter-blur-light;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	& form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		background-color: $clr-mid;
+		border: 1px solid red;
+		padding: 1rem;
+		// padding-top: 4rem;
+		border-radius: 8px;
+		box-shadow: $shadow;
+		position: relative;
+	}
+
+	&__input {
+		padding: 0.5rem;
+		border: 2px solid red;
+		border-radius: 5px;
+		margin-bottom: 5px;
+		text-align: center;
+		height: var(--height);
+		width: 100%;
+
+		grid-column: 1/ -1;
+	}
+
+	&__button {
+		padding: 1rem;
+		border: 2px solid red;
+		border-radius: 5px;
+		height: 1.5rem;
+		background-color: $clr-light;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: var(--height);
+
+		grid-column: 1/ -1;
+		cursor: pointer;
+	}
+
+	& h3 {
+		grid-column: 1 / span 1;
+		padding: 1rem;
+		padding-bottom: 2rem;
+	}
+
+	& span {
+		padding: 1rem;
+		padding-bottom: 2rem;
+		grid-column: 2 / span 1;
+		position: absolute;
+		right: 5%;
+		top: 5%;
+		width: 3rem;
+		height: 3rem;
+		opacity: 0.3;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+		&:before,
+		&:after {
+			content: ' ';
+			position: absolute;
+			left: 15px;
+			height: 2.5rem;
+			width: 2px;
+			background-color: #333;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}
+// <div class="new-group">
+// 				<form action="">
+// 					<input class="new-group__input" type="text" />
+// 					<button class="new-group__button"></button>
+// 				</form>
+// 			</div>

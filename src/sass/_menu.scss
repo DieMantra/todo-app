@@ -1,0 +1,33 @@
+.header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $clr-light;
+	border-radius: $radius-top;
+	border-bottom: $clr-dark;
+	max-width: $max-width-lg;
+	margin: 2vw auto 0 auto;
+	box-shadow: $shadow;
+
+	& div {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		margin: $mg-md;
+		cursor: pointer;
+
+		& img {
+			margin-left: $mg-sm;
+			width: 2.2rem;
+			height: 2.2rem;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.header {
+		& img {
+			display: none;
+		}
+	}
+}

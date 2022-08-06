@@ -1,0 +1,36 @@
+$clr-light: #f6f6f6;
+$clr-mid: #e4e4e4;
+$clr-dark: #5c5c5c;
+$clr-orange: #ffc58f;
+$clr-dark-25: rgba(92, 92, 92, 0.25);
+$clr-dark-50: rgba(92, 92, 92, 0.5);
+
+$gradient-light: linear-gradient(to right, #f6f6f6, #e4e4e4);
+$gradient-mid: linear-gradient(to right, #e4e4e4, #5c5c5c);
+$gradient-clr-light: linear-gradient(112.64deg, #a0bbff 0%, #ffc58f 100.82%);
+
+$pad-lg: 1.6rem;
+$pad-md: 1.2rem;
+$pad-sm: 0.8rem;
+$pad-txt: 0.5rem 1rem;
+
+$mg-lg: 1.6rem;
+$mg-md: 1.2rem;
+$mg-sm: 0.8rem;
+
+$max-width-lg: 1200px;
+$max-width-md: 992px;
+$max-width-sm: 768px;
+
+$shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+	0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+	0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
+	0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+	0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+	0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+
+$filter-blur: blur(20px);
+$filter-blur-light: blur(5px);
+
+$radius-top: 15px 15px 0px 0px;
+$radius-top-left: 15px 0px 0px 0px;

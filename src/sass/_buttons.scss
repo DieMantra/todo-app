@@ -1,0 +1,19 @@
+.remove-button {
+	border: 1px solid darken($clr-mid, 50%);
+	border-radius: 5px;
+	background-color: $clr-light;
+	transition: 250ms all;
+	margin-left: auto;
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: darken($clr-light, 10%);
+			transform: translateY(-1px);
+			box-shadow: $shadow;
+		}
+		&:active {
+			transform: translateY(1px);
+			background-color: lighten($clr-orange, 10%);
+		}
+	}
+}
